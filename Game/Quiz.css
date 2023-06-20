@@ -1,0 +1,269 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+    color:white;
+   
+}
+/*--------------------- fonts -------------------------- */
+@font-face {
+    font-family: myFont;
+    src: url(fonts/Rajdhani-Medium.ttf);
+}
+@font-face {
+    font-family: Font;
+    src: url(fonts/SpaceGrotesk-Bold.ttf);
+}
+@font-face {
+    font-family: monFont;
+    src: url(fonts/SpaceGrotesk-Regular.ttf);
+}
+
+/*------------------- header --------------------*/
+
+#logo_bat{
+    float: left;
+    position: absolute;
+    top: 6%;
+    left: 13%;
+    cursor: pointer;
+    
+}
+#logo_bat:hover{
+    -webkit-filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)contrast(104%);
+    filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)contrast(104%);
+}
+
+
+nav ul{ 
+    display: flex;
+    gap: 45px;
+    flex-wrap: nowrap;
+    list-style-type:none;
+   
+}
+ul li{
+    position: relative;
+    top: 40px;
+    left: 70%;
+    color: white;
+    padding: 0 3px   0 3px;
+    font-family: monFont;
+    font-size: 18px;
+    cursor:pointer; 
+    transition: all .4s; 
+   
+}
+ul li.active{
+    border-bottom: 1px solid white;
+    font-weight: bold;
+ 
+}
+nav li a{ 
+    color: white;
+    text-decoration: none;
+   
+}
+nav li:hover:not(.active){ 
+    border-bottom: 1px solid white;
+    font-weight: bold;
+    font-size: 19px;
+    transition: all .4s;
+    color: rgb(208, 208, 208);
+}
+header div.top {
+    border-left: 3px solid    rgba(186, 184, 184, 0.2);
+    border-right: 3px solid    rgba(186, 184, 184, 0.2);
+    width: 84.4%;
+    margin-left: 9%;
+    padding-bottom: 5% ;
+}
+header {
+    background-image: url('assets/Illustrations/Batgame_1.png');
+    background-repeat: no-repeat;
+    height: 60vw;
+    background-size: cover;
+    position: relative;
+    width: auto;
+    
+}
+ 
+.head_content{
+    padding: 0% 5% 15% 15% ;
+    width: 85%;
+    margin-top: -4%;
+    margin-left: -6%;
+
+}
+header  aside{
+    position: fixed;
+    top: 45%;
+    left: 95%;
+    display: grid;
+    gap: 25px;
+    margin-left: -50px;
+    z-index: 1000;
+  
+}
+ header aside img.icon_reseaux{
+    margin-left: 25px;
+}
+header p{
+    font-family: myFont;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 25px;
+    letter-spacing: 3px;
+    border-left: 3px solid    rgba(186, 184, 184, 0.2);
+    border-right: 3px solid    rgba(186, 184, 184, 0.2);
+    padding: 18% 40% 34.1% 5% ; 
+    position: relative;
+}
+.form-group1{
+    border: none;
+    background-color: rgb(175, 175, 175);
+    padding: 5px 3px 5px 3px;
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 10px;
+ 
+}
+.form-group2{
+    border: none;
+    background-color: rgb(175, 175, 175);
+    padding: 5px 3px 5px 3px;
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 10px
+}
+.form-group3{
+    border: none;
+    background-color: rgb(175, 175, 175);
+    padding: 5px 3px 5px 3px;
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 10px
+}
+.form-group4{
+    border: none;
+    background-color: rgb(175, 175, 175);
+    padding: 5px 3px 5px 3px;
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 10px
+}
+
+  
+  
+.main{
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-family: monFont;
+    font-size: 18px;
+  }
+
+  input[type="checkbox"] {
+    visibility: hidden;
+  }
+  
+  .newcheck {
+    position: absolute;
+    top: 5px;
+    left:2px;
+    height: 18px;
+    width: 18px;
+    background-color: rgb(255, 255, 255);
+
+  }
+  
+  .main input:checked ~ .newcheck {
+    background-color:white;
+  }
+  
+  .newcheck:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+ 
+  .main input:checked ~ .newcheck:after {
+    display: block;
+  }
+ 
+  .main  .newcheck:after {
+    left: 4px;
+    bottom: 3px;
+    width: 6px;
+    height: 12px;
+    border: solid #665245;
+    border-width: 0 4px 4px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+#content section p{
+    margin-left: 25%;
+   font-family: monFont;
+   font-size: 18px;
+   padding-bottom: 2%;
+
+}
+#content section span:not(span.newcheck){
+   position: relative;
+   left: 50%;
+    font-family: myFont;
+    font-size: 35px;
+    font-weight: bold;
+ 
+ }
+#content section button{
+    background-image: linear-gradient(to left ,#ba6317,#665245);
+    border: none;
+    padding: 2% 10% 2% 10%;
+    margin-right: 25px;
+    position: relative;
+    top:-80px;
+    cursor:pointer;
+    left: 13px;
+    color: white;
+    font-family: myFont;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 20%;
+    margin-left: 30%;
+    
+
+}
+#content{
+    border-left: 3px solid    rgba(186, 184, 184, 0.2);
+    border-right: 3px solid    rgba(186, 184, 184, 0.2);
+    width: 84.4%;
+    margin-left: 9%;
+}
+
+footer{
+    text-align: center;
+}
+footer p{
+    padding-bottom: 2%;
+}
+footer .ico{
+    margin-left:10px ;
+}
+footer .ico_res{
+    margin-left:20px ;
+}
+footer .ico_res,.mini{
+    position: relative;
+    top: -10px;
+}
+footer span.info{
+    font-family: monFont;
+    font-size: 12px;
+}
+

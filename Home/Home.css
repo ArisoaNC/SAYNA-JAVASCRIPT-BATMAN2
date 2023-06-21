@@ -61,14 +61,43 @@ ul li.active{
 nav li a{ 
     color: white;
     text-decoration: none;
+    
+   
+}
+nav li a:hover{ 
+    color: yellow;
+    border-bottom: 1px solid yellow;
    
 }
 nav li:hover:not(.active){ 
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid yellow;
     font-weight: bold;
-    font-size: 19px;
     transition: all .4s;
-    color: rgb(208, 208, 208);
+   
+}
+.popupbox{
+    background-image: linear-gradient(130deg, rgb(237,222,191),rgba(25,88,125,0.4) );
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    position: fixed;
+    top: 250px;
+    left: 300px;
+    display: none;
+    z-index: 1000;
+   
+}
+.popupbox h1{
+    text-transform: uppercase;
+    font-family: myFont;
+   
+}
+.inside{
+    padding: 50px;
+    margin: 30px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 40px black;
+    background-color:rgb(25,88,125) ;
 }
 @media screen and  (max-width:767px){
     nav ul{ 
@@ -78,10 +107,11 @@ nav li:hover:not(.active){
         list-style-type:none;
        
     }
+    
     ul li{
         position: relative;
         top: 40px;
-        left: 325px;
+        left: 250px;
         color: white;
         border-bottom: 1px solid white;
         padding: 0 3px   0 3px;
@@ -97,6 +127,7 @@ nav li:hover:not(.active){
         text-decoration: none;
        
     } 
+
    
     header{
         background-image: url('Assets/Illustrations/Bathome1.png');
@@ -105,43 +136,35 @@ nav li:hover:not(.active){
         background-size: cover;
         text-align: center;
         position: relative;
-        width: auto;
-    
+        width:auto;
+       
     }
     
   .slide {
     position: relative;
     width: 100%;
     height: 100%;
-    animation: slide-in 2s ease-in-out; /* Durée et effet de transition */
+    -webkit-animation: slide-in 1500ms ease-in-out; 
+    animation: slide-in 1500ms ease-in-out; /* Durée et effet de transition */
   }
   
  
   
   @keyframes slide-in {
     0% {
-      transform: translateX(-100%); /* Début de la translation */
+        opacity: 0;
+      transform: translateX(-100%) scale(0.1); /* Début de la translation */
     }
     100% {
-      transform: translateX(0); /* Fin de la translation */
+        opacity: 1;
+      transform: translateX(0) scale(1); /* Fin de la translation */
     }
   }
   
-  @keyframes fade-in {
-    0% {
-      opacity: 0; /* Début de l'opacité à 0 */
-    }
-    100% {
-      opacity: 1; /* Fin de l'opacité à 1 */
-    }
-  }
     .head_content{
-        border-left: 3px solid    rgba(123, 123, 123, 0.2);
-        border-right: 3px groove  rgba(207, 207, 207, 0.2);
-        border-top: 3px solid  rgba(171, 171, 171, 0.2);
         margin-top: 100px;
         margin-left: 5%;
-        padding: 70px 130px 100px 90px;
+        padding: 70px 130px 100px 0px;
         color: whitesmoke;
         width: 58%;
         font-family: monFont;
@@ -176,9 +199,13 @@ nav li:hover:not(.active){
         gap: 25px;
         margin-left: -50px;
         z-index: 1000;
+        display: none;
       
     }
-    
+    header div.flèche_down_header img{
+     display: none;
+      
+    }
     
     header  aside img.ico_reseaux{
         margin-left: 25px;
@@ -189,6 +216,9 @@ nav li:hover:not(.active){
     }
       /*-------------------- contenu-------------------------  */
     /* Section cinema */
+    div.info img{
+        display: none;
+    }
      #cinema{
         margin-left: 2%;
         margin-top: 20%;
@@ -197,12 +227,16 @@ nav li:hover:not(.active){
         font-family: myFont;
         font-size: 36px;
     }
+    .container{
+        padding-bottom: 20%;
+    }
    
     
     div.container p{
        
         font-family: monFont;
         font-size: 18px;
+        text-align: justify;
         
     }
     #nemesis{
@@ -235,8 +269,9 @@ nav li:hover:not(.active){
        margin-left: 30%;
        
     }
-    main .makedown{
-        margin-left: 30%; 
+    main img.makedown{
+        position: relative;
+        left: 4000px;
        
     }
    
@@ -337,7 +372,7 @@ main .multimedia .card span{
 }
 
 #media{
-    margin-top: 20%;
+    margin-top: 20;
 }
 div.slide img{
     position: relative;
@@ -495,7 +530,8 @@ footer .info {
     font-size: 10px;
     float:right;
     margin-left: 30px;
-    margin-top: -7%;   
+    margin-top: -7%;  
+    
    
 }
 img.guillemet{
@@ -557,531 +593,608 @@ filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)co
 filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)contrast(104%);
 }
 }
+/* ***************************breakpoint********************* */
 @media screen and (min-width:768px)and (max-width:1023px){
     
-  .slide {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    animation: slide-in 2s ease-in-out; /* Durée et effet de transition */
-  }
-  
-
-  
-  @keyframes slide-in {
-    0% {
-      transform: translateX(-100%); /* Début de la translation */
-    }
-    100% {
-      transform: translateX(0); /* Fin de la translation */
-    }
-  }
-  
-  @keyframes fade-in {
-    0% {
-      opacity: 0; /* Début de l'opacité à 0 */
-    }
-    100% {
-      opacity: 1; /* Fin de l'opacité à 1 */
-    }
-  }
-    header{
-        background-image: url('Assets/Illustrations/Bathome1.png');
-        background-repeat: no-repeat;
-        height: 75%;
-        background-size: cover;
+    .popupbox h1{
+        background-image: linear-gradient(130deg, rgba(237,222,191,0.4),rgba(25,88,125,0.4) 80%);
+        width: 50%;
+        margin: auto;
         text-align: center;
-        position: relative;
-        width: auto;
-    
+        position: absolute;
+        top: 250px;
+        left: 300px;
+        border: 2px solid #021e2e;
     }
-    .head_content{
-        border-left: 3px solid    rgba(123, 123, 123, 0.1);
-        border-right: 3px groove  rgba(207, 207, 207, 0.1);
-        border-top: 3px solid  rgba(171, 171, 171, 0.2);
-        margin-top: 100px;
-         margin-left: 60px;
-        padding: 130px 130px 100px 130px;
-        color: whitesmoke;
-        width: 58%;
-        font-family: monFont;
-        font-size: 18px;
+    .inside{
+        padding: 50px;
+        margin: 30px;
+        border-radius: 20px;
+        box-shadow: 2px 2px 40px black;
+        background-color:rgba(25,88,125,0.4) ;
     }
-    .head_content strong{
-        font-size: 18px;
-    }
-    header  aside img.icon_reseaux{
-        margin-left: 25px;
-    }
-    header .buttons .btn{
-        background-image: linear-gradient(to top right , #eddebf, #890008);
-        border: none;
-        opacity: .6;
-        padding: 15px;
-        margin-right: 25px;
-        position: relative;
-        top:-80px;
-        left: 13px;
-        color: white;
-        font-family: myFont;
-        font-size: 20px;
-    }
-    header .buttons .btn:hover{
-        opacity: 1;
-    }
-    
-    header  aside{
-        position: fixed;
-        top: 45%;
-        left: 89%;
-        z-index: 1000;
-        display: grid;
-        gap: 25px;
-        margin-left: -50px;
-        transform: translate(30%);
-    }
-    
-    
-    header  aside img.ico_reseaux{
-        margin-left: 25px;
-    }
-    header  aside img:hover{
-    -webkit-filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)contrast(104%);
-    filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)contrast(104%);
-    }
-
-/*------------------- contenu-------------------------  */
-/* Section cinema */
- #cinema{
-    margin-left: -50px;
-}
-.container h1{
-    font-family: myFont;
-    font-size: 36px;
-}
-div.container .deco{
-    position:relative; 
-    left:95px;   
-}
-
-div.container{
-    border-left: 3px solid    rgba(207, 207, 207, 0.2);
-    border-right: 3px groove  rgba(207, 207, 207, 0.2);
-    margin-left: 100px;
-    padding-left:40px;
-    padding-right: 20px;
-    padding-top: 130px;
-    width: 78%;
-    height: 100vh;
-    font-family: monFont;
-    font-size: 18px;
-    margin-top: -80px;
-    margin-bottom: 80px;
-}
-
-div.container p{
-   
-    font-family: monFont;
-    font-size: 18px;
-    
-}
-#nemesis{
-    margin-top: 250px;
-}
-main div.desc:not(.desc_long) {
-    margin-top: 20px;
-    text-align: center;
-    font-family: monFont;
-    font-size: medium;
-    
-}
-main div.desc .desc_long {
-    margin-top: 10px;
-    text-align: center;
-    font-family: monFont;
-    font-size: medium;
-    margin-left: -55px;
-    
-}
-main .images{
-    margin: 0px;
-    padding: 0px;
-}
-main .img1{
-    margin: 20px;
-    float: left; 
-}
-main .makedown{
-    margin-right: -20px; 
-    margin-top: 10px;
-}
-
-main #cinema article img{
-    transition: all .6s;
-    cursor: pointer;
-}
- main .nemesis article img,main .alliés article img{
-    transition: all .6s;
-    cursor: pointer;
-}
-main #cinema article img:hover{
-    transform: scale(1.3, 1.2);
-    padding-bottom: 5%;
-}
- main .nemesis article img:hover,main .alliés article img:hover{
-    transform: scale(1.3, 1.2);
-    padding-bottom: 5%;
-}
-/* section Allié */
-img.Al_ph{
-    margin-left: -20px;
-}
-#Alliés{
-    margin-top: 15%;
-}
- .bat_aside{
-    margin-left: 20px;
-}
-div.container4{
-    position:relative;
-    left:35px;
-}
-div.container4 h1{
-    display: inline;
-    margin-left: -850px;
-}
- 
-div.container4{
-    border-left: 3px solid    rgba(207, 207, 207, 0.2);
-    border-right: 3px groove  rgba(207, 207, 207, 0.2);
-     margin-left: 35px;
-    padding-left:60px;
-    padding-right: 20px;
-    width: 78%;
-    height: 100vh;
-    font-family: monFont;
-    font-size: 18px;
-    margin-top: 110px;
-    margin-bottom: 100px;
-    
-}
-div.container4 p{
-    margin-bottom: 50px;
-    font-family: monFont;
-    font-size: 18px;
-    
-} 
-
-/* section justice */
-
- img.justice{
-    margin-left: -160px;
-    
-}
-#justice{
-    margin-top: 40%;
-}
-div.container5{
-    border-left: 3px solid    rgba(207, 207, 207, 0.2);
-    border-right: 3px groove  rgba(207, 207, 207, 0.2);
-    margin-left: 60px;
-    padding-left: 40px;
-    padding-right: 20px;
-    width: 78%;
-    height: 100vh;
-    font-family: monFont;
-    font-size: 18px;
-    margin-top: 330px;
-    margin-bottom: 80px;
-    
-}
-div.container5 h1:not(div.container1 h1,div.container2 h1){ 
-    font-family: myFont;
-    font-size: 36px;
-    position: relative;
-    left:-5px;
-    top: 10px;
-    
-    
-} 
-/* section multimédia */
-div.container1 h1{ 
-    font-family: myFont;
-    font-size: 36px;
-}
-div.container1{
-    border-left: 3px solid    rgba(207, 207, 207, 0.2);
-    border-right: 3px solid  rgba(207, 207, 207, 0.2);
-    margin-left: -50px;
-    padding-right: 320px;
-    padding-left: 70px;
-    width: 58%;
-    height: 130vh;
-    font-family: monFont;
-    font-size: 18px;
-    margin-top: -50px;
-    margin-bottom: 15%;
-}
-div.card{
-    background-image: linear-gradient(to bottom right, #292827, #162229);
-    border: none;
-    border-radius: 0 15px 15px 0 ;
-    width: 350px;
-    height: 190px;
-    padding: 10px;
-    font-family: monFont;
-    line-height: 14px;
-    font-size: 12px;
-    
-    
-}
-main .multimedia .card span{
-    color: #FFFF00;
-}
-
-
-div.slide img{
-    position: relative;
-    top: -220px;
-}
-div.slide .card{
-    margin-left: 250px;
-    
-}
-.annonce{
-    position: relative;
-    margin-top: -850px;
-    margin-left: -13px;
-    z-index: 0;
-}
-.annonce:hover{
-   box-shadow: 2px 2px 30px 5px #72717191;
-   z-index: 1000;
-   
-}
-.play{
-    position:relative;
-    top: -285px;
-    left:40%;
-    z-index: 10;
-}
-/*  contact */
- div.container2 h1{
-    font-family: myFont;
-    font-size: 36px;
-}
-div.container2{
-    border-left: 3px solid    rgba(207, 207, 207, 0.2);
-    border-right: 3px solid  rgba(207, 207, 207, 0.2);
-    border-bottom: 3px solid  rgba(207, 207, 207, 0.2);
-    margin-left: -120px;
-    padding-right: 315px;
-    padding-left: 70px;
-    height: 150vh;
-    font-family: monFont;
-    font-size: 18px;
-    background-image: linear-gradient(to bottom right,#3f3b32, #021e2e);
-    width: 84%;
-}
-
-main .contact input, main .contact select{
-    background-color:unset;
-    border:none;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.418);
-    color:rgba(123, 123, 123, 0.982) ;
-    width: 100%;
-   
-}
-main .contact div.group, .btn1 {
-    margin-bottom: 35px;
-    position: relative;
-    top: auto;
-    left: 125px;
-}
-
-div.group p {
-    font-family: monFont;
-    font-size: 12px;
-    color:rgba(123, 123, 123, 0.982) ;
-}
-main .contact #email{
-    margin-top: 20px;
-}
-
-main .contact input[type="checkbox"]{
-    width: 15px;
-    height: 15px;
-     
-}
-main .contact label{
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-h4{
-    font-family: monFont;
-    font-size: 20px; 
-    font-weight: lighter;  
-}
-main .contact #message{
-
-    margin-top: 30px;
-}
-main .contact form button:not(.btn1){
-    border-top: 1px solid #EDDEBF ;
-    border-bottom:1px solid #19587D;
-    border-left: 1px solid #EDDEBF  ;
-    border-right: 1px solid #19587D;
-    padding: 13px;
-    margin-left: 50px;
-    margin-bottom: 10px;
-    color: white;
-    text-align: center;
-    font-family: myFont;
-    font-size: 20px;
-
-}
-main .contact form .btn4{
-    background-color:  #1b3039;
-}
-main .contact form .btn3{
-    background-color:  #22343c;
-}
-main .contact form .btn2{
-    background-color:  #2e3f45;
-}
-main .contact .buttons button{
-    border-color: rgba(221, 218, 218, 0.644);
-    border-width: 1px 0px 0px 1px;
-    font-family: myFont;
-    font-size: 20px;
-}
-main .contact .buttons button:hover{
-    background-image: linear-gradient(to bottom right, #554f43,#10354a );
-   
-}
-main .contact .btn1{
-    border: none;
-    background-image: linear-gradient(to bottom right, #EDDEBF, #890008);
-    padding: 15px;
-    width: 200px;
-    opacity: .6;
-    margin-left: 250px;
-    margin-bottom: 10px;
-    color: white;
-    text-align: center;
-    cursor: pointer;
-    font-size: 20px;
-    font-family: myFont;
-}
-main .contact input:focus, select{
-   height: 35px;
-   background-color: white;
-}
-main .contact h1{
-    margin-left: 250px;
- }
- main img.icon_WB{
-    position: absolute;
-   
-   
- }
-
-/* -----------------------------------Footer------------------------------ */
- img.guillemet{
-    margin-left: 450px;
-    margin-bottom: 70px;
- }
-footer{
-    margin-top: 20%;
-}
-footer .info {
-    font-size: 10px;
-    float:right;
-    margin-right: 120px;
-    
-   
-}
-
-
- .container3{
-    border-left: 3px solid    rgba(207, 207, 207, 0.2);
-    border-right: 3px groove  rgba(207, 207, 207, 0.2);
-    margin-left: -50px;
-    padding-right: 20px;
-    padding-left: 70px;
-    height: 100vh;
-    font-family: monFont;
-    font-size: 18px;
-    width: 97%;
-    margin-top: -1px;
-    
-}
-.container3 img{
-    position: relative;
-    left: 100px;
-    top: 30px;
-}
-.container3 img:hover{
-    -webkit-filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)contrast(104%);
-filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)contrast(104%);
-}
-
-.container3 #footer_item p {
-    padding-top: 50px;
-    padding-left: 50px;
-      
+    div.info img{
+        display: none;
+        animation: fadeIn 1500ms ease-in-out; 
+     }
+     img.fade{
+        
+         animation: fadeIn 1500ms ease-in-out; 
+     }
+   .slide {
+     animation: slide-in 2s ease-in-out; /* Durée et effet de transition */
    }
-.container3 #footer_item p:not(p span) {
- text-align: center;
- font-size: 12px;
- font-family: monFont;
+ .title{
+     animation: TitleSlide-in 2s ease-in-out;
+ }
    
-}
-.container3 #footer_item span {
-    font-weight : lighter;
-    font-size: 18px;
-}
-.container3 svg{
-    position: relative;
-    left: 350px;
-    top: -140px;
+   
+   @keyframes slide-in {
+     0% {
+         opacity: 0;
+       transform: translateX(-100%)scale(0.1); /* Début de la translation */
+     }
+     100% {
+         opacity: 1;
+       transform: translateX(0)scale(1); /* Fin de la translation */
+     }
+   }
+   @keyframes TitleSlide-in {
+     0% {
+         opacity: 0;
+       transform: translateX(-100%); /* Début de la translation */
+     }
+     100% {
+         opacity: 1;
+       transform: translateX(0); /* Fin de la translation */
+     }
+   }
+   
+   @keyframes fadeIn {
+     0% {
+       opacity: 0; /* Début de l'opacité à 0 */
+     }
+     100% {
+       opacity: 1; /* Fin de l'opacité à 1 */
+     }
+   }
+ header{
+     background-image: url('Assets/Illustrations/Bathome1.png');
+     background-repeat: no-repeat;
+     height: 95%;
+     background-size: cover;
+     text-align: center;
+     position: relative;
+     width: 100%;
+     margin-top: -2%;
     
-}
-.container3 #icon{
-    display: flex;
-    gap: 20px;
-    flex-wrap: nowrap; 
-    margin-left: 150px;
-}
-.container3 .ico:hover{
--webkit-filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)contrast(104%);
-filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)contrast(104%);
-}  
-}
+ 
+ }
+ header div.top {
+     border-left: 3px solid    rgba(186, 184, 184, 0.1);
+     border-right: 3px solid    rgba(186, 184, 184, 0.1);
+     width: 84.5%;
+     margin-left: 6%;
+     padding-bottom: 10% ;
+ }
+ .head_content{
+     border-left: 3px solid    rgba(123, 123, 123, 0.3);
+     border-right: 3px groove  rgba(207, 207, 207, 0.3);
+     border-top: 3px solid  rgba(171, 171, 171, 0.2);
+     padding: 10% 0% 25% 9.5%;
+     margin-left: 60px;
+     color: whitesmoke;
+     width: 75%;
+     font-family: monFont;
+     font-size: 18px;
+    
+ }
+ .head_content strong{
+     font-size: 18px;
+ }
+ header div.flèche_down_header img{
+     margin-left: -5px;
+     position: relative;
+     top: -50px;
+ }
+ header .buttons .btn{
+     background-image: linear-gradient(to top right , #eddebf, #890008);
+     border: none;
+     opacity: .6;
+     padding: 15px;
+     margin-right: 25px;
+     margin-left: 25px;
+     position:relative;
+     cursor: pointer;
+     color: white;
+     font-family: myFont;
+     font-size: 20px;
+     position: relative;
+     top: -200px;
+     
+ }
+ 
+ header .buttons .btn:hover{
+     opacity: 1;
+ }
+ 
+ header  aside{
+     position: fixed;
+     top: 45%;
+     left: 89%;
+     display: grid;
+     z-index: 1000;
+     gap: 25px;
+     margin-left: -50px;
+     transform: translate(30%);
+ }
+ 
+ 
+ header  aside img.icon_reseaux{
+     margin-left: 25px;
+ }
+ header  aside img:hover{
+ -webkit-filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)contrast(104%);
+ filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)contrast(104%);
+ } 
+ 
+ 
+ /*------------------- contenu-------------------------  */
+ /* Section cinema */
+  .container h1{
+     font-family: myFont;
+     font-size: 36px;
+     padding-top: 20%;
+ }
+ div.container .deco{
+     position:relative; 
+     left:95px;   
+ }
+ 
+ div.container{
+     border-left: 3px solid    rgba(207, 207, 207, 0.2);
+     border-right: 3px groove  rgba(207, 207, 207, 0.2);
+     margin-left: 60px;
+     padding-left:40px;
+     padding-right: 20px;
+     width: 78.5%;
+     height: 100vh;
+     font-family: monFont;
+     font-size: 18px;
+     margin-top: -12%;
+    padding-bottom: 25%;
+     position: relative;
+     z-index: 1000;
+ }
+ 
+ div.container p{
+     font-family: monFont;
+     font-size: 18px;
+     
+     
+ }
+ 
+ main div.desc:not(.desc_long) {
+     margin-top: 20px;
+     text-align: center;
+     font-family: monFont;
+     font-size: medium;
+     
+ }
+ main div.desc .desc_long {
+     margin-top: 10px;
+     text-align: center;
+     font-family: monFont;
+     font-size: medium;
+     margin-left: -55px;
+     
+ }
+ main .images{
+     margin: 0px;
+     padding: 0px;
+ }
+ main .img1{
+     margin: 20px;
+     float: left; 
+ }
+ main .makedown{
+     margin-right: -20px; 
+     margin-top: 20px;
+ }
+ 
+ div.containerNem{
+     border-left: 3px solid    rgba(207, 207, 207, 0.2);
+     border-right: 3px groove  rgba(207, 207, 207, 0.2);
+     margin-left: 60px;
+     padding-left:40px;
+     padding-right: 20px;
+     width: 78.5%;
+     height: 100vh;
+     font-family: monFont;
+     font-size: 18px;
+     margin-top: -15.5%;
+     padding-bottom: 10%;
+     position: relative;
+     z-index: 1000;
+ }
+ main #cinema article img{
+     transition: all .6s;
+ }
+  main .nemesis article img,main .alliés article img{
+     transition: all .6s;
+     
+ }
+ main #cinema article img:hover{
+     transform: scale(1.3, 1.2);
+     padding-bottom: 5%;
+ }
+  main .nemesis article img:hover,main .alliés article img:hover{
+     transform: scale(1.3, 1.2);
+     padding-bottom: 5%;
+ }
+ main .nemesis {
+     margin-top: 155px;
+ } 
+ 
+ /* section Allié */
+ 
+  .bat_aside{
+     position: relative;
+     left: 75%;
+     top: -10%;
+    
+ }
+ img.Al_ph{
+     margin-left: -20px;
+ }
+ div.container4 h1{
+     margin-top: -15%;
+ 
+ }
+ div.container4{
+     border-left: 3px solid    rgba(207, 207, 207, 0.2);
+     border-right: 3px groove  rgba(207, 207, 207, 0.2);
+      margin-left: 60px;
+     padding-left:40px;
+     padding-right: 20px;
+     width: 78%;
+     height: 100vh;
+     font-family: monFont;
+     font-size: 18px;
+     padding-bottom: 35%;
+     
+ }
+ div.container4 p{
+     margin-bottom: 50px;
+     font-family: monFont;
+     font-size: 18px;
+     
+ } 
+ 
+ /* section justice */
+ 
+ img.justice{
+     margin-left: -160px;
+     
+ }
+ div.container5{
+     border-left: 3px solid    rgba(207, 207, 207, 0.2);
+     border-right: 3px groove  rgba(207, 207, 207, 0.2);
+     margin-left: 60px;
+     padding-left: 40px;
+     padding-right: 20px;
+     width: 78%;
+     height: 100vh;
+     font-family: monFont;
+     font-size: 18px;
+     margin-top: -40%;
+     margin-bottom: 80px;
+     
+ }
+ div.container5 h1:not(div.container1 h1,div.container2 h1){ 
+     font-family: myFont;
+     font-size: 36px;
+     position: relative;
+     left:-5px;
+     top: 10px;
+     
+     
+ }
+ #justice{
+     margin-top: 40%;
+  } 
+ 
+ /* section multimédia */
+  div.container1 h1{ 
+     font-family: myFont;
+     font-size: 36px;
+ }
+ div.container1{
+     border-left: 3px solid    rgba(207, 207, 207, 0.2);
+     border-right: 3px solid  rgba(207, 207, 207, 0.2);
+     margin-left: -50px;
+     padding-right: 320px;
+     padding-left: 70px;
+     width: 58%;
+     height: 130vh;
+     font-family: monFont;
+     font-size: 18px;
+ }
+ div.card{
+     background-image: linear-gradient(to bottom right, #292827, #162229);
+     border: none;
+     border-radius: 0 15px 15px 0 ;
+     width: 350px;
+     height: 190px;
+     padding: 10px;
+     font-family: monFont;
+     line-height: 14px;
+     font-size: 12px;
+     
+ }
+ main .multimedia .card span{
+     color: #FFFF00;
+ }
+ 
+ 
+ div.slide img{
+     position: relative;
+     top: -220px;
+ }
+ div.slide .card{
+     margin-left: 250px;
+     
+ }
+ .annonce{
+     position: relative;
+     margin-top: -850px;
+     margin-left: -13px;
+     z-index: 0;
+     
+ }
+ .annonce:hover{
+    box-shadow: 2px 2px 30px 5px #72717191;
+    z-index: 1000;
+    
+ }
+ .play{
+     position:relative;
+     top: -285px;
+     left:40%;
+     z-index: 10;
+ } 
+ 
+ /*  contact */
+  div.container2 h1{
+     font-family: myFont;
+     font-size: 36px;
+ }
+ div.container2{
+     border-left: 3px solid    rgba(207, 207, 207, 0.2);
+     border-right: 3px solid  rgba(207, 207, 207, 0.2);
+     border-bottom: 3px solid  rgba(207, 207, 207, 0.2);
+     margin-left: -120px;
+     padding-right: 315px;
+     padding-left: 70px;
+     height: 150vh;
+     font-family: monFont;
+     font-size: 18px;
+     background-image: linear-gradient(to bottom right,#3f3b32, #021e2e);
+     width: 84%;
+ }
+ 
+ main .contact input, main .contact select{
+     background-color:unset;
+     border:none;
+     border-bottom: 2px solid rgba(255, 255, 255, 0.418);
+     color:rgba(123, 123, 123, 0.982) ;
+     width: 100%;
+    
+ }
+ main .contact div.group, .btn1 {
+     margin-bottom: 35px;
+     position: relative;
+     top: auto;
+     left: 125px;
+ }
+ 
+ div.group p {
+     font-family: monFont;
+     font-size: 12px;
+     color:rgba(123, 123, 123, 0.982) ;
+ }
+ main .contact #email{
+     margin-top: 20px;
+ }
+ 
+ main .contact input[type="checkbox"]{
+     width: 15px;
+     height: 15px;
+      
+ }
+ main .contact label{
+     font-size: 20px;
+     margin-bottom: 30px;
+ }
+ h4{
+     font-family: monFont;
+     font-size: 20px; 
+     font-weight: lighter;  
+ }
+ main .contact #message{
+ 
+     margin-top: 30px;
+ }
+ main .contact form button:not(.btn1){
+     border-top: 1px solid #EDDEBF ;
+     border-bottom:1px solid #19587D;
+     border-left: 1px solid #EDDEBF  ;
+     border-right: 1px solid #19587D;
+     padding: 13px;
+     margin-left: 90px;
+     margin-bottom: 10px;
+     color: white;
+     text-align: center;
+     font-family: myFont;
+     font-size: 20px;
+ 
+ }
+ main .contact form .btn4{
+     background-color:  #1b3039;
+ }
+ main .contact form .btn3{
+     background-color:  #22343c;
+ }
+ main .contact form .btn2{
+     background-color:  #2e3f45;
+ }
+ main .contact .buttons button{
+     border-color: rgba(221, 218, 218, 0.644);
+     border-width: 1px 0px 0px 1px;
+     transition: all .5s;
+     font-family: myFont;
+     font-size: 20px;
+ }
+ main .contact .buttons button:hover{
+     background-image: linear-gradient(to bottom right, #554f43,#10354a );
+    
+ }
+ main .contact .btn1{
+     border: none;
+     background-image: linear-gradient(to bottom right, #EDDEBF, #890008);
+     padding: 15px;
+     width: 200px;
+     opacity: .6;
+     margin-left: 250px;
+     margin-bottom: 10px;
+     color: white;
+     text-align: center;
+     cursor: pointer;
+     font-size: 20px;
+     font-family: myFont;
+ }
+ main .contact input:focus, select{
+    height: 35px;
+    background-color: white;
+ }
+ main .contact h1{
+     margin-left: 250px;
+  } 
+  
+ /* -----------------------------------Footer------------------------------ */
+  
+  img.guillemet{
+     margin-left: 450px;
+     margin-bottom: 70px;
+  }
+  footer{
+     margin-top: 20%;
+ }
+ footer .info {
+     font-size: 10px;
+     float:right;
+     margin-right: 120px;
+     
+    
+ }
+ 
+ 
+  .container3{
+     border-left: 3px solid    rgba(207, 207, 207, 0.2);
+     border-right: 3px groove  rgba(207, 207, 207, 0.2);
+     margin-left: -50px;
+     padding-right: 20px;
+     padding-left: 70px;
+     height: 100vh;
+     font-family: monFont;
+     font-size: 18px;
+     width: 97%;
+     margin-top: -1px;
+     
+     
+ }
+ .container3 img{
+     position: relative;
+     left: 100px;
+     top: 30px;
+ }
+ .container3 img:hover{
+     -webkit-filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)contrast(104%);
+ filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)contrast(104%);
+ }
+ 
+ .container3 #footer_item p {
+     padding-top: 50px;
+     padding-left: 50px;
+       
+    }
+ .container3 #footer_item p:not(p span) {
+  text-align: center;
+  font-size: 12px;
+  font-family: monFont;
+    
+ }
+ .container3 #footer_item span {
+     font-weight : lighter;
+     font-size: 18px;
+ }
+ .container3 svg{
+     position: relative;
+     left: 350px;
+     top: -140px;
+     
+ }
+ .container3 #icon{
+     display: flex;
+     gap: 20px;
+     flex-wrap: nowrap; 
+     margin-left: 150px;
+ }
+ .container3 .ico:hover{
+ -webkit-filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)contrast(104%);
+ filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)contrast(104%);
+ }
+ } 
 /* *********************DESKTOP******************************* */
  @media screen and (min-width:1024px){
-   div.info img{
+   
+    div.info img{
        display: none;
     }
+    img.fade{
+       
+        animation: fadeIn 1500ms ease-in-out; 
+    }
   .slide {
-    position: relative;
-    width: 100%;
-    height: 100%;
     animation: slide-in 2s ease-in-out; /* Durée et effet de transition */
   }
-  
+.title{
+    animation: TitleSlide-in 2s ease-in-out;
+}
   
   
   @keyframes slide-in {
     0% {
+        opacity: 0;
+      transform: translateX(-100%)scale(0.1); /* Début de la translation */
+    }
+    100% {
+        opacity: 1;
+      transform: translateX(0)scale(1); /* Fin de la translation */
+    }
+  }
+  @keyframes TitleSlide-in {
+    0% {
+        opacity: 0;
       transform: translateX(-100%); /* Début de la translation */
     }
     100% {
+        opacity: 1;
       transform: translateX(0); /* Fin de la translation */
     }
   }
   
-  @keyframes fade-in {
+  @keyframes fadeIn {
     0% {
       opacity: 0; /* Début de l'opacité à 0 */
     }
@@ -1097,22 +1210,36 @@ header{
     text-align: center;
     position: relative;
     width: 100%;
+    margin-top: -2%;
+   
 
 }
+header div.top {
+    border-left: 3px solid    rgba(186, 184, 184, 0.1);
+    border-right: 3px solid    rgba(186, 184, 184, 0.1);
+    width: 84.5%;
+    margin-left: 6%;
+    padding-bottom: 10% ;
+}
 .head_content{
-    border-left: 3px solid    rgba(123, 123, 123, 0.1);
-    border-right: 3px groove  rgba(207, 207, 207, 0.1);
+    border-left: 3px solid    rgba(123, 123, 123, 0.3);
+    border-right: 3px groove  rgba(207, 207, 207, 0.3);
     border-top: 3px solid  rgba(171, 171, 171, 0.2);
-    margin-top: 100px;
-     margin-left: 60px;
-    padding: 130px 130px 100px 130px;
+    padding: 10% 0% 25% 9.5%;
+    margin-left: 60px;
     color: whitesmoke;
-    width: 58%;
+    width: 75%;
     font-family: monFont;
     font-size: 18px;
+   
 }
 .head_content strong{
     font-size: 18px;
+}
+header div.flèche_down_header img{
+    margin-left: -5px;
+    position: relative;
+    top: -50px;
 }
 header .buttons .btn{
     background-image: linear-gradient(to top right , #eddebf, #890008);
@@ -1120,13 +1247,17 @@ header .buttons .btn{
     opacity: .6;
     padding: 15px;
     margin-right: 25px;
+    margin-left: 25px;
     position:relative;
-    top:-80px;
     cursor: pointer;
     color: white;
     font-family: myFont;
     font-size: 20px;
+    position: relative;
+    top: -200px;
+    
 }
+
 header .buttons .btn:hover{
     opacity: 1;
 }
@@ -1157,6 +1288,7 @@ filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)co
  .container h1{
     font-family: myFont;
     font-size: 36px;
+    padding-top: 20%;
 }
 div.container .deco{
     position:relative; 
@@ -1169,19 +1301,20 @@ div.container{
     margin-left: 60px;
     padding-left:40px;
     padding-right: 20px;
-    padding-top: 130px;
-    width: 78%;
+    width: 78.5%;
     height: 100vh;
     font-family: monFont;
     font-size: 18px;
-    margin-top: -80px;
-    margin-bottom: 80px;
+    margin-top: -12%;
+   padding-bottom: 25%;
+    position: relative;
+    z-index: 1000;
 }
 
 div.container p{
-    margin-top: 50px;
     font-family: monFont;
     font-size: 18px;
+    
     
 }
 
@@ -1213,7 +1346,21 @@ main .makedown{
     margin-top: 20px;
 }
 
-
+div.containerNem{
+    border-left: 3px solid    rgba(207, 207, 207, 0.2);
+    border-right: 3px groove  rgba(207, 207, 207, 0.2);
+    margin-left: 60px;
+    padding-left:40px;
+    padding-right: 20px;
+    width: 78.5%;
+    height: 100vh;
+    font-family: monFont;
+    font-size: 18px;
+    margin-top: -15.5%;
+    padding-bottom: 10%;
+    position: relative;
+    z-index: 1000;
+}
 main #cinema article img{
     transition: all .6s;
 }
@@ -1232,6 +1379,7 @@ main #cinema article img:hover{
 main .nemesis {
     margin-top: 155px;
 } 
+
 /* section Allié */
 
  .bat_aside{
@@ -1257,8 +1405,7 @@ div.container4{
     height: 100vh;
     font-family: monFont;
     font-size: 18px;
-    margin-top: 110px;
-    margin-bottom: 100px;
+    padding-bottom: 35%;
     
 }
 div.container4 p{
@@ -1284,7 +1431,7 @@ div.container5{
     height: 100vh;
     font-family: monFont;
     font-size: 18px;
-    margin-top: 30px;
+    margin-top: -40%;
     margin-bottom: 80px;
     
 }
@@ -1316,7 +1463,6 @@ div.container1{
     height: 130vh;
     font-family: monFont;
     font-size: 18px;
-    margin-top: -70px;
 }
 div.card{
     background-image: linear-gradient(to bottom right, #292827, #162229);
@@ -1348,6 +1494,7 @@ div.slide .card{
     margin-top: -850px;
     margin-left: -13px;
     z-index: 0;
+    
 }
 .annonce:hover{
    box-shadow: 2px 2px 30px 5px #72717191;
@@ -1507,6 +1654,7 @@ footer .info {
     font-size: 18px;
     width: 97%;
     margin-top: -1px;
+    
     
 }
 .container3 img{

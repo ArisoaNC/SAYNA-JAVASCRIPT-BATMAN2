@@ -61,18 +61,19 @@ ul li.active{
 nav li a{ 
     color: white;
     text-decoration: none;
-    
+    transition: all .3s;
    
 }
 nav li a:hover{ 
     color: yellow;
     border-bottom: 1px solid yellow;
+    font-weight: bolder;
    
 }
 nav li:hover:not(.active){ 
     border-bottom: 1px solid yellow;
-    font-weight: bold;
     transition: all .4s;
+    font-weight: bolder;
    
 }
 .popupbox{
@@ -99,7 +100,31 @@ nav li:hover:not(.active){
     box-shadow: 2px 2px 40px black;
     background-color:rgb(25,88,125) ;
 }
+
 @media screen and  (max-width:767px){
+    div.information {
+        display: none;
+     }
+     div.show {
+         display: inline-block;
+         position: relative;
+         z-index: 1000;
+         text-align: center;
+         margin: 0;
+         
+      }
+
+    img.batman_begin{
+        display: inline;
+        margin-left: 185px;
+        margin-top: -2%;
+     }
+    img#icon_prev{
+   display: none;
+    }
+    img#icon_next{
+        display: none;
+     }
     nav ul{ 
         display: flex;
         gap: 45px;
@@ -125,6 +150,7 @@ nav li:hover:not(.active){
     nav li a{ 
         color: white;
         text-decoration: none;
+       transition: all .3s;
        
     } 
 
@@ -163,7 +189,7 @@ nav li:hover:not(.active){
   
     .head_content{
         margin-top: 100px;
-        margin-left: 5%;
+        margin-left: 20%;
         padding: 70px 130px 100px 0px;
         color: whitesmoke;
         width: 58%;
@@ -197,7 +223,7 @@ nav li:hover:not(.active){
         left: 89%;
         display: grid;
         gap: 25px;
-        margin-left: -50px;
+        margin-left: -46px;
         z-index: 1000;
         display: none;
       
@@ -260,18 +286,17 @@ nav li:hover:not(.active){
     }
     main .images{
         margin: 0px;
-        padding: 0px;
+        padding-bottom: 0px;
     }
-    main .img1 img{
+    main .img1 {
        width: 40%;
         height: 40%;
        display: grid;
-       margin-left: 30%;
-       
+     
     }
     main img.makedown{
         position: relative;
-        left: 4000px;
+        left: 180px;
        
     }
    
@@ -286,11 +311,11 @@ nav li:hover:not(.active){
         
     }
     main #cinema article img:hover{
-        transform: scale(1.3, 1.2);
+        transform: scale(1.1, 1.1);
         padding-bottom: 5%;
     }
      main .nemesis article img:hover,main .alliés article img:hover{
-        transform: scale(1.3, 1.2);
+        transform: scale(1.1, 1.1);
         padding-bottom: 5%;
     }
     div.container .deco{
@@ -300,7 +325,7 @@ nav li:hover:not(.active){
 /* section Allié */
 #Alliés{
     margin-top: 15%;
-    margin-left: 2%;
+    margin-left: -5%;
 }
  .bat_aside{
     margin-left: 50%;
@@ -351,7 +376,9 @@ div.container1 h1{
     font-size: 36px;
     margin-left: 2%;
 }
-
+div.container1 { 
+    padding-bottom: 30%;
+}
 div.card{
     background-image: linear-gradient(to bottom right, #292827, #162229);
     border: none;
@@ -361,11 +388,7 @@ div.card{
     padding: 10px;
     font-family: monFont;
     line-height: 14px;
-    font-size: 12px;
-    
-   
-    
-    
+    font-size: 12px 
 }
 main .multimedia .card span{
     color: #FFFF00;
@@ -380,7 +403,7 @@ div.slide img{
     left: -20%;
 }
 div.slide .card{
-    margin-left: 160px;
+    margin-left: 265px;
     
 }
 
@@ -397,7 +420,7 @@ div.slide .card{
 }
 .play{
     position:relative;
-    top: -185px;
+    top: -235px;
     left:35%;
     z-index: 10;
 }
@@ -405,6 +428,7 @@ div.slide .card{
 div.container2 h1{
     font-family: myFont;
     font-size: 36px;
+    padding-top: 2%;
 }
 div.container2{
     border-left: 3px solid    rgba(207, 207, 207, 0.2);
@@ -602,9 +626,9 @@ filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)co
         margin: auto;
         text-align: center;
         position: absolute;
-        top: 250px;
-        left: 300px;
-        border: 2px solid #021e2e;
+        top: 60px;
+        left: 130px;
+       
     }
     .inside{
         padding: 50px;
@@ -627,7 +651,6 @@ filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)co
  .title{
      animation: TitleSlide-in 2s ease-in-out;
  }
-   
    
    @keyframes slide-in {
      0% {
@@ -673,7 +696,7 @@ filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)co
  header div.top {
      border-left: 3px solid    rgba(186, 184, 184, 0.1);
      border-right: 3px solid    rgba(186, 184, 184, 0.1);
-     width: 84.5%;
+     width: 87%;
      margin-left: 6%;
      padding-bottom: 10% ;
  }
@@ -684,7 +707,7 @@ filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)co
      padding: 10% 0% 25% 9.5%;
      margin-left: 60px;
      color: whitesmoke;
-     width: 75%;
+     width: 77.5%;
      font-family: monFont;
      font-size: 18px;
     
@@ -721,11 +744,11 @@ filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)co
  header  aside{
      position: fixed;
      top: 45%;
-     left: 89%;
+     left: 91.5%;
      display: grid;
      z-index: 1000;
      gap: 25px;
-     margin-left: -50px;
+     margin-left: -46px;
      transform: translate(30%);
  }
  
@@ -741,6 +764,12 @@ filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)co
  
  /*------------------- contenu-------------------------  */
  /* Section cinema */
+ div.info img{
+    display: none;
+ }
+ div.info img{
+     display: inline-block;
+  }
   .container h1{
      font-family: myFont;
      font-size: 36px;
@@ -752,22 +781,22 @@ filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)co
  }
  
  div.container{
-     border-left: 3px solid    rgba(207, 207, 207, 0.2);
-     border-right: 3px groove  rgba(207, 207, 207, 0.2);
-     margin-left: 60px;
-     padding-left:40px;
-     padding-right: 20px;
-     width: 78.5%;
-     height: 100vh;
-     font-family: monFont;
-     font-size: 18px;
-     margin-top: -12%;
-    padding-bottom: 25%;
-     position: relative;
-     z-index: 1000;
- }
- 
+    border-left: 3px solid    rgba(207, 207, 207, 0.2);
+    border-right: 3px groove  rgba(207, 207, 207, 0.2);
+    margin-left: 60px;
+    padding-left:40px;
+    padding-right: 20px;
+    width: 81%;
+    height: 100vh;
+    font-family: monFont;
+    font-size: 18px;
+    margin-top: -12%;
+   padding-bottom: 25%;
+    
+}
+
  div.container p{
+  
      font-family: monFont;
      font-size: 18px;
      
@@ -792,14 +821,18 @@ filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)co
  main .images{
      margin: 0px;
      padding: 0px;
+    
  }
  main .img1{
-     margin: 20px;
+    margin: 40px;
      float: left; 
+     width: 20%;
  }
+ 
+
  main .makedown{
      margin-right: -20px; 
-     margin-top: 20px;
+     margin-top: -40px;
  }
  
  div.containerNem{
@@ -808,14 +841,13 @@ filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)co
      margin-left: 60px;
      padding-left:40px;
      padding-right: 20px;
-     width: 78.5%;
+     width: 81%;
      height: 100vh;
      font-family: monFont;
      font-size: 18px;
-     margin-top: -15.5%;
+     margin-top: -20px;
      padding-bottom: 10%;
-     position: relative;
-     z-index: 1000;
+     clear: both;
  }
  main #cinema article img{
      transition: all .6s;
@@ -825,11 +857,11 @@ filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)co
      
  }
  main #cinema article img:hover{
-     transform: scale(1.3, 1.2);
+     transform: scale(1.1, 1.1);
      padding-bottom: 5%;
  }
   main .nemesis article img:hover,main .alliés article img:hover{
-     transform: scale(1.3, 1.2);
+     transform: scale(1.1, 1.1);
      padding-bottom: 5%;
  }
  main .nemesis {
@@ -852,12 +884,13 @@ filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)co
  
  }
  div.container4{
+    clear: both;
      border-left: 3px solid    rgba(207, 207, 207, 0.2);
      border-right: 3px groove  rgba(207, 207, 207, 0.2);
-      margin-left: 60px;
+     margin-left: 60px;
      padding-left:40px;
      padding-right: 20px;
-     width: 78%;
+     width: 81%;
      height: 100vh;
      font-family: monFont;
      font-size: 18px;
@@ -883,7 +916,7 @@ filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)co
      margin-left: 60px;
      padding-left: 40px;
      padding-right: 20px;
-     width: 78%;
+     width: 81%;
      height: 100vh;
      font-family: monFont;
      font-size: 18px;
@@ -905,6 +938,21 @@ filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)co
   } 
  
  /* section multimédia */
+ #icon_next{
+    position: relative;
+    top:-42%;
+    left:140% ;
+ }
+ img#icon_prev{
+    position: relative;
+    top:19%;
+   
+ }
+ img.batman_begin{
+    display: inline;
+    margin-left: 90px;
+    height:225px;
+ }
   div.container1 h1{ 
      font-family: myFont;
      font-size: 36px;
@@ -915,7 +963,7 @@ filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)co
      margin-left: -50px;
      padding-right: 320px;
      padding-left: 70px;
-     width: 58%;
+     width:60%;
      height: 130vh;
      font-family: monFont;
      font-size: 18px;
@@ -947,7 +995,7 @@ filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)co
  }
  .annonce{
      position: relative;
-     margin-top: -850px;
+     margin-top: -350px;
      margin-left: -13px;
      z-index: 0;
      
@@ -982,7 +1030,7 @@ filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)co
      background-image: linear-gradient(to bottom right,#3f3b32, #021e2e);
      width: 84%;
  }
- 
+
  main .contact input, main .contact select{
      background-color:unset;
      border:none;
@@ -1157,9 +1205,34 @@ filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)co
  } 
 /* *********************DESKTOP******************************* */
  @media screen and (min-width:1024px){
+    img.batman_begin{
+        display: inline;
+        margin-left: 185px;
+     }
+    img#icon_prev{
+    margin-bottom: -150px;
+    position: relative;
+    top:9%
+    }
+    img#icon_next{
+        position: relative;
+        top:-45%;
+        left:120% ;
+     }
+    img.makedown{
+        margin-top: 100px;
+    
+    }
    
-    div.info img{
-       display: none;
+    div.show {
+       display: inline-block;
+        position: relative;
+        top: -80px;
+        z-index: 1000;
+        text-align: center;
+     }
+    div.information{
+        display: none;
     }
     img.fade{
        
@@ -1217,8 +1290,8 @@ header{
 header div.top {
     border-left: 3px solid    rgba(186, 184, 184, 0.1);
     border-right: 3px solid    rgba(186, 184, 184, 0.1);
-    width: 84.5%;
-    margin-left: 6%;
+    width: 85.5%;
+    margin-left: 4.5%;
     padding-bottom: 10% ;
 }
 .head_content{
@@ -1228,7 +1301,7 @@ header div.top {
     padding: 10% 0% 25% 9.5%;
     margin-left: 60px;
     color: whitesmoke;
-    width: 75%;
+    width: 76%;
     font-family: monFont;
     font-size: 18px;
    
@@ -1269,7 +1342,7 @@ header  aside{
     display: grid;
     z-index: 1000;
     gap: 25px;
-    margin-left: -50px;
+    margin-left: -46px;
     transform: translate(30%);
 }
 
@@ -1301,14 +1374,14 @@ div.container{
     margin-left: 60px;
     padding-left:40px;
     padding-right: 20px;
-    width: 78.5%;
+    width: 81%;
     height: 100vh;
     font-family: monFont;
     font-size: 18px;
     margin-top: -12%;
    padding-bottom: 25%;
     position: relative;
-    z-index: 1000;
+    
 }
 
 div.container p{
@@ -1318,13 +1391,7 @@ div.container p{
     
 }
 
-main div.desc:not(.desc_long) {
-    margin-top: 20px;
-    text-align: center;
-    font-family: monFont;
-    font-size: medium;
-    
-}
+
 main div.desc .desc_long {
     margin-top: 10px;
     text-align: center;
@@ -1333,9 +1400,14 @@ main div.desc .desc_long {
     margin-left: -55px;
     
 }
+
+
 main .images{
     margin: 0px;
     padding: 0px;
+    position: relative;
+    z-index: 0;
+   
 }
 main .img1{
     margin: 20px;
@@ -1352,14 +1424,14 @@ div.containerNem{
     margin-left: 60px;
     padding-left:40px;
     padding-right: 20px;
-    width: 78.5%;
+    width: 81%;
     height: 100vh;
     font-family: monFont;
     font-size: 18px;
     margin-top: -15.5%;
+    padding-top: 10%;
     padding-bottom: 10%;
-    position: relative;
-    z-index: 1000;
+   
 }
 main #cinema article img{
     transition: all .6s;
@@ -1369,11 +1441,12 @@ main #cinema article img{
     
 }
 main #cinema article img:hover{
-    transform: scale(1.3, 1.2);
+    transform: scale(1.1, 1.1);
     padding-bottom: 5%;
+    margin: 0;
 }
  main .nemesis article img:hover,main .alliés article img:hover{
-    transform: scale(1.3, 1.2);
+    transform: scale(1.1, 1.1);
     padding-bottom: 5%;
 }
 main .nemesis {
@@ -1385,7 +1458,7 @@ main .nemesis {
  .bat_aside{
     position: relative;
     left: 75%;
-    top: -10%;
+    top: -20%;
    
 }
 img.Al_ph{
@@ -1401,11 +1474,12 @@ div.container4{
      margin-left: 60px;
     padding-left:40px;
     padding-right: 20px;
-    width: 78%;
+    width: 81%;
     height: 100vh;
     font-family: monFont;
     font-size: 18px;
     padding-bottom: 35%;
+    clear: both;
     
 }
 div.container4 p{
@@ -1427,20 +1501,25 @@ div.container5{
     margin-left: 60px;
     padding-left: 40px;
     padding-right: 20px;
-    width: 78%;
+    width: 80.5%;
     height: 100vh;
     font-family: monFont;
     font-size: 18px;
     margin-top: -40%;
     margin-bottom: 80px;
+    line-height: 20px;
     
+}
+.justiceContent{
+    margin-top: -20%;
+    padding-bottom: 20%;
 }
 div.container5 h1:not(div.container1 h1,div.container2 h1){ 
     font-family: myFont;
     font-size: 36px;
     position: relative;
     left:-5px;
-    top: 10px;
+    top: -40%;
     
     
 }
@@ -1453,27 +1532,34 @@ div.container5 h1:not(div.container1 h1,div.container2 h1){
     font-family: myFont;
     font-size: 36px;
 }
+div.container1 article{ 
+   margin-left: 20%;
+}
 div.container1{
     border-left: 3px solid    rgba(207, 207, 207, 0.2);
     border-right: 3px solid  rgba(207, 207, 207, 0.2);
     margin-left: -50px;
     padding-right: 320px;
+    padding-bottom: 320px;
     padding-left: 70px;
-    width: 58%;
+    width: 71%;
     height: 130vh;
     font-family: monFont;
     font-size: 18px;
 }
+
 div.card{
     background-image: linear-gradient(to bottom right, #292827, #162229);
     border: none;
     border-radius: 0 15px 15px 0 ;
     width: 350px;
-    height: 190px;
+    height: 220px;
     padding: 10px;
     font-family: monFont;
     line-height: 14px;
     font-size: 12px;
+    margin-top: 60px;
+    margin-left: 46%;
     
 }
 main .multimedia .card span{
@@ -1483,15 +1569,14 @@ main .multimedia .card span{
 
 div.slide img{
     position: relative;
-    top: -220px;
+    top: -250px;
 }
-div.slide .card{
-    margin-left: 250px;
-    
-}
+
+
+
 .annonce{
     position: relative;
-    margin-top: -850px;
+    margin-top: -100%;
     margin-left: -13px;
     z-index: 0;
     
@@ -1503,8 +1588,8 @@ div.slide .card{
 }
 .play{
     position:relative;
-    top: -285px;
-    left:40%;
+    top: -380px;
+    left:42%;
     z-index: 10;
 } 
 
@@ -1512,19 +1597,22 @@ div.slide .card{
  div.container2 h1{
     font-family: myFont;
     font-size: 36px;
+    padding-top: 5%;
+    text-align: center;
 }
 div.container2{
     border-left: 3px solid    rgba(207, 207, 207, 0.2);
     border-right: 3px solid  rgba(207, 207, 207, 0.2);
     border-bottom: 3px solid  rgba(207, 207, 207, 0.2);
-    margin-left: -120px;
+    margin-left: -100px;
     padding-right: 315px;
     padding-left: 70px;
     height: 150vh;
     font-family: monFont;
     font-size: 18px;
     background-image: linear-gradient(to bottom right,#3f3b32, #021e2e);
-    width: 84%;
+    width: 87%;
+    margin-top: -10%;
 }
 
 main .contact input, main .contact select{
@@ -1628,7 +1716,7 @@ main .contact h1{
 /* -----------------------------------Footer------------------------------ */
  
  img.guillemet{
-    margin-left: 450px;
+    margin-left: 70%;
     margin-bottom: 70px;
  }
  footer{
@@ -1637,7 +1725,7 @@ main .contact h1{
 footer .info {
     font-size: 10px;
     float:right;
-    margin-right: 120px;
+    margin-right: 39%;
     
    
 }
@@ -1652,7 +1740,7 @@ footer .info {
     height: 100vh;
     font-family: monFont;
     font-size: 18px;
-    width: 97%;
+    width: 99%;
     margin-top: -1px;
     
     
@@ -1684,7 +1772,7 @@ filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)co
 }
 .container3 svg{
     position: relative;
-    left: 350px;
+    left: 490px;
     top: -140px;
     
 }

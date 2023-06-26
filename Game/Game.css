@@ -135,35 +135,98 @@ header div.flèche_down_header{
     top: 90vh;
     left: 50%;
 }
+
 #content section img{
-    margin-left:10%
+    margin-left:10%;
+    
 }
-#content section p{
+#content div.chevalier p{
    text-align: center;
    font-family: myFont;
    text-transform: uppercase;
    font-size: 25px;
    font-weight: bold;
+   margin-top:3%;
+   padding-top: 10%;
+   margin-left: -2%;
 
 }
-#content section button{
+#content section button#demarrer{
     background-image: linear-gradient(to left ,#ba6317,#665245);
     border: none;
     padding: 2% 10% 2% 10%;
     margin-right: 25px;
     position: relative;
-    top:-80px;
+    top:-50px;
     cursor:pointer;
-    left: 13px;
+    left: -20px;
     color: white;
     font-family: myFont;
     font-size: 20px;
     text-transform: uppercase;
     margin-top: 20%;
+    margin-left: 40%;
+    
+
+}
+#content{
+    border-left: 3px solid    rgba(186, 184, 184, 0.2);
+    border-right: 3px solid    rgba(186, 184, 184, 0.2);
+    width: 84.4%;
+    margin-left: 9%;
+}
+#questions{
+    display: none;
+}
+.qcm{
+    border: none;
+    background-color: rgb(175, 175, 175);
+    padding: 5px 3px 5px 3px;
+    width: 50%;
+    margin-left: 34%;
+    margin-bottom: 10px;
+ 
+}
+
+#content div.question-quizz p{
+    margin-left: 34%;
+   font-family: monFont;
+   font-size: 18px;
+   padding-bottom: 2%;
+   padding-top: 10%;
+
+}
+#content  div.question-quizz span,div.nbrQuestion span{
+   position: relative;
+   left: 45%;
+    font-family: myFont;
+    font-size: 35px;
+    font-weight: bold;
+ 
+ }
+#content div.btn-game button{
+    background-image: linear-gradient(to left ,#ba6317,#665245);
+    border: none;
+    padding: 2% 10% 2% 10%;
+    margin-right: 25px;
+    position: relative;
+    cursor:pointer;
+    left: 5%;
+    color: white;
+    font-family: myFont;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 10%;
+    margin-bottom: 20%;
     margin-left: 30%;
     
 
 }
+.card-image img{
+    float: left;
+    width:200px;
+}
+
 #content{
     border-left: 3px solid    rgba(186, 184, 184, 0.2);
     border-right: 3px solid    rgba(186, 184, 184, 0.2);

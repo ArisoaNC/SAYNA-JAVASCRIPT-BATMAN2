@@ -13,7 +13,7 @@
     <header>
         <div class="top">
             <div id="logo_bat">
-                <img src="Assets/Logos/logohome.png" alt="logoBat" width="70%" height="50%"> 
+               <a href="Game.html"> <img src="Assets/Logos/logohome.png" alt="logoBat" width="70%" height="50%"> </a>
             </div>
             <nav>
                 <ul>
@@ -36,18 +36,60 @@
             <a href="#bottom"><img src="assets/logos/logo_bat_flèche_2.png" alt="logo bat arrow down" class="arrow2" width="80" height="40"></a>
         </aside>
         <div class="flèche_down_header" >
-            <img src="Assets/logos/flèche_down_header.png" alt="arrow down header" width="50">
+            <img id="down"src="Assets/logos/flèche_down_header.png" alt="arrow down header" width="50">
         </div>
 
     </header>
     <!-- --------------------------------contenu----------------------- -->
     <main id="content">
-        <section>
-            <p>Connaissez vous bien le chevalier noir ?</p>
-            <img src="assets/Illustrations/Batgame_2.png" alt=" Chevalier noir" width="80%" height="80%">
-            <a href="quiz1.html" ><button id="btn " >Démarrer le quiz</button></a>
-        </section>
-        
+    <section class="wrapped">
+        <div class="btn-game" id="entete">
+           <div class="chevalier">
+             <p>Connaissez vous bien le chevalier noir ?</p>
+             <img src="assets/Illustrations/Batgame_2.png" alt=" Chevalier noir" width="80%" height="80%">
+            </div>
+            <button id="demarrer" >Démarrer le quiz</button></a>
+        </div>
+      </div>
+
+      <div class="questions" id="questions">
+        <div class="nbrQuestion">
+            <span id="current-question">1</span> <span> / </span><span id="totalQuiz">15</span>
+        </div>
+        <div class="card-quizz">
+            <div class="card-image">
+                <img src="assets/Illustrations/Batgame_3.png" alt="">
+            </div>
+            <div class="card-body-quizz">
+                <div  class="question-quizz">
+                   <p id="intro-quiz"> Quel est l'autre nom de l'homme-Mystère ?</p>
+                </div>
+                <div id="quiz-box">
+                    <form action="">
+                        <div class="qcm ">
+                            <input type="checkbox" name="quizz0">
+                            <label for="">Le Sphinx</label>
+                        </div>
+                        <div class="qcm">
+                            <input type="checkbox" name="quizz0">
+                            <label for="">Saphir</label>
+                        </div>
+                        <div class="qcm">
+                            <input type="checkbox" name="quizz0">
+                            <label for="">Le Jocker</label>
+                        </div>
+                   </form>
+                </div>
+            
+            </div>
+        </div>
+        <div class="btn-game">
+            <a href="Quiz2.html"><button id="Question-suivante">Question suivante</button></a>
+        </div>
+    </div>
+      
+    </section>
+    
      <!-- -------------------------footer------------------- -->
     <footer id="bottom">
         <div>
